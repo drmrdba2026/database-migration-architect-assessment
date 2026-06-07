@@ -1,0 +1,3 @@
+[submodule "apps/dotnet-eshop"]
+	path = apps/dotnet-eshop
+	url = https://github.com/NimblePros/eShopOnWeb
