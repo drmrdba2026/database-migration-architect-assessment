@@ -1,0 +1,21 @@
+﻿# Secrets — never commit these
+.env
+*.env
+
+# SQL Server backup files (too large for git)
+migration/sqlserver/backups/*.bak
+migration/mysql/*.sql
+migration/postgres/*.dump
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Build output
+**/bin/
+**/obj/
+
+# OS files
+.DS_Store
+Thumbs.db
