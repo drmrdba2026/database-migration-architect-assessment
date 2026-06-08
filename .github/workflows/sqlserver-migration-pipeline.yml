@@ -49,16 +49,24 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Install sqlcmd
+        run: |
+          curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+          curl -sSL https://packages.microsoft.com/config/ubuntu/22.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+          sudo apt-get update -q
+          sudo ACCEPT_EULA=Y apt-get install -y mssql-tools18 unixodbc-dev
+          echo "/opt/mssql-tools18/bin" >> $GITHUB_PATH
+
       - name: Wait for SQL Server
         run: sleep 30
 
       - name: Initialize database
         run: |
-          /opt/mssql-tools18/bin/sqlcmd -S localhost,1433 -U sa -P 'SqlPass@1234' -C -Q "IF NOT EXISTS (SELECT name FROM sys.databases WHERE name='eShopOnWeb') CREATE DATABASE [eShopOnWeb];"
+          sqlcmd -S localhost,1433 -U sa -P 'SqlPass@1234' -C -Q "IF NOT EXISTS (SELECT name FROM sys.databases WHERE name='eShopOnWeb') CREATE DATABASE [eShopOnWeb]; SELECT name FROM sys.databases WHERE name='eShopOnWeb';"
 
       - name: Enable CDC
         run: |
-          /opt/mssql-tools18/bin/sqlcmd -S localhost,1433 -U sa -P 'SqlPass@1234' -C -d eShopOnWeb -Q "EXEC sys.sp_cdc_enable_db; SELECT name, is_cdc_enabled FROM sys.databases WHERE name='eShopOnWeb';"
+          sqlcmd -S localhost,1433 -U sa -P 'SqlPass@1234' -C -d eShopOnWeb -Q "EXEC sys.sp_cdc_enable_db; SELECT name, is_cdc_enabled FROM sys.databases WHERE name='eShopOnWeb';"
 
       - name: Install Python dependencies
         run: pip install pymssql -q
