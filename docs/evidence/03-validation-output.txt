@@ -1,0 +1,67 @@
+/Users/vidyameenakshi/Desktop/database-migration-architect-assessment/validation/reconciliation.py:58: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  output = {"generated": str(datetime.utcnow())}
+/Users/vidyameenakshi/Desktop/database-migration-architect-assessment/validation/reconciliation.py:12: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  result = {"label": label, "host": host, "database": db, "timestamp": str(datetime.utcnow()), "tables": [], "aggregates": {}}
+
+==================================================
+Validating: SOURCE-ONPREM-DOCKER — localhost/eShopOnWeb
+==================================================
+
+--- Row counts ---
+  __EFMigrationsHistory: 3 rows
+  BasketItems: 0 rows
+  Baskets: 0 rows
+  Catalog: 12 rows
+  CatalogBrands: 5 rows
+  CatalogTypes: 4 rows
+  OrderItems: 0 rows
+  Orders: 0 rows
+
+--- Aggregates ---
+  Catalog_count: 12
+  Catalog_sum_price: 137.50
+  CatalogBrands_count: 5
+  CatalogTypes_count: 4
+
+==================================================
+Validating: TARGET-AZURE-SQLDB — dbmig-sqlsrv2024.database.windows.net/eShopOnWeb
+==================================================
+
+--- Row counts ---
+  __EFMigrationsHistory: 3 rows
+  BasketItems: 0 rows
+  Baskets: 0 rows
+  Catalog: 12 rows
+  CatalogBrands: 5 rows
+  CatalogTypes: 4 rows
+  OrderItems: 0 rows
+  Orders: 0 rows
+
+--- Aggregates ---
+  Catalog_count: 12
+  Catalog_sum_price: 137.50
+  CatalogBrands_count: 5
+  CatalogTypes_count: 4
+
+==================================================
+RECONCILIATION DIFF
+==================================================
+  ✓ BasketItems: src=0  tgt=0
+  ✓ Baskets: src=0  tgt=0
+  ✓ Catalog: src=12  tgt=12
+  ✓ CatalogBrands: src=5  tgt=5
+  ✓ CatalogTypes: src=4  tgt=4
+  ✓ OrderItems: src=0  tgt=0
+  ✓ Orders: src=0  tgt=0
+  ✓ __EFMigrationsHistory: src=3  tgt=3
+
+Aggregates:
+  ✓ CatalogBrands_count: src=5.0  tgt=5.0
+  ✓ CatalogTypes_count: src=4.0  tgt=4.0
+  ✓ Catalog_count: src=12.0  tgt=12.0
+  ✓ Catalog_sum_price: src=137.5  tgt=137.5
+
+Total mismatches: 0
+
+Report: validation/sqlserver_reconciliation.json
+Passed: True

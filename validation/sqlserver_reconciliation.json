@@ -1,0 +1,97 @@
+{
+  "generated": "2026-06-08 16:48:56.425530",
+  "source": {
+    "label": "source-onprem-docker",
+    "host": "localhost",
+    "database": "eShopOnWeb",
+    "timestamp": "2026-06-08 16:48:56.524445",
+    "tables": [
+      {
+        "table": "__EFMigrationsHistory",
+        "row_count": 3
+      },
+      {
+        "table": "BasketItems",
+        "row_count": 0
+      },
+      {
+        "table": "Baskets",
+        "row_count": 0
+      },
+      {
+        "table": "Catalog",
+        "row_count": 12
+      },
+      {
+        "table": "CatalogBrands",
+        "row_count": 5
+      },
+      {
+        "table": "CatalogTypes",
+        "row_count": 4
+      },
+      {
+        "table": "OrderItems",
+        "row_count": 0
+      },
+      {
+        "table": "Orders",
+        "row_count": 0
+      }
+    ],
+    "aggregates": {
+      "Catalog_count": 12.0,
+      "Catalog_sum_price": 137.5,
+      "CatalogBrands_count": 5.0,
+      "CatalogTypes_count": 4.0
+    }
+  },
+  "target": {
+    "label": "target-azure-sqldb",
+    "host": "dbmig-sqlsrv2024.database.windows.net",
+    "database": "eShopOnWeb",
+    "timestamp": "2026-06-08 16:48:57.323515",
+    "tables": [
+      {
+        "table": "__EFMigrationsHistory",
+        "row_count": 3
+      },
+      {
+        "table": "BasketItems",
+        "row_count": 0
+      },
+      {
+        "table": "Baskets",
+        "row_count": 0
+      },
+      {
+        "table": "Catalog",
+        "row_count": 12
+      },
+      {
+        "table": "CatalogBrands",
+        "row_count": 5
+      },
+      {
+        "table": "CatalogTypes",
+        "row_count": 4
+      },
+      {
+        "table": "OrderItems",
+        "row_count": 0
+      },
+      {
+        "table": "Orders",
+        "row_count": 0
+      }
+    ],
+    "aggregates": {
+      "Catalog_count": 12.0,
+      "Catalog_sum_price": 137.5,
+      "CatalogBrands_count": 5.0,
+      "CatalogTypes_count": 4.0
+    }
+  },
+  "mismatches": [],
+  "passed": true
+}
