@@ -1,0 +1,4 @@
+.git
+.vs
+docs/evidence
+migration/sqlserver/backups

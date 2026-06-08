@@ -1,0 +1,17 @@
+# Stage 1 - build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY apps/dotnet-eshop/. .
+
+RUN dotnet restore src/Web/Web.csproj
+
+RUN dotnet publish src/Web/Web.csproj -c Release -o /app --no-restore
+
+# Stage 2 - runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /app .
+
+EXPOSE 80
+ENTRYPOINT ["dotnet", "Web.dll"]

@@ -1,0 +1,5 @@
+NAMES              STATUS                        PORTS
+onprem-nginx       Up 45 seconds                 0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+onprem-eshop       Up 58 seconds                 0.0.0.0:8082->80/tcp, [::]:8082->80/tcp
+onprem-sqlserver   Up About a minute (healthy)   0.0.0.0:1433->1433/tcp, [::]:1433->1433/tcp
+sqlserver-target   Up 32 hours (healthy)         0.0.0.0:1434->1433/tcp, [::]:1434->1433/tcp
