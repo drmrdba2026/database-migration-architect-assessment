@@ -1,0 +1,11 @@
+tbl           cnt        
+------------- -----------
+CatalogBrands           5
+CatalogTypes            4
+Catalog                12
+Orders                  0
+OrderItems              0
+Baskets                 0
+BasketItems             0
+
+(7 rows affected)

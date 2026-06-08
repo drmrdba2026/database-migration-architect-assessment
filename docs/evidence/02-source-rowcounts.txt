@@ -1,0 +1,25 @@
+table_name                                                                                                                       row_count           
+-------------------------------------------------------------------------------------------------------------------------------- --------------------
+__EFMigrationsHistory                                                                                                                               3
+BasketItems                                                                                                                                         0
+Baskets                                                                                                                                             0
+captured_columns                                                                                                                                   33
+Catalog                                                                                                                                            12
+CatalogBrands                                                                                                                                       5
+CatalogTypes                                                                                                                                        4
+change_tables                                                                                                                                       7
+dbo_BasketItems_CT                                                                                                                                  0
+dbo_Baskets_CT                                                                                                                                      0
+dbo_Catalog_CT                                                                                                                                      0
+dbo_CatalogBrands_CT                                                                                                                                0
+dbo_CatalogTypes_CT                                                                                                                                 0
+dbo_OrderItems_CT                                                                                                                                   0
+dbo_Orders_CT                                                                                                                                       0
+ddl_history                                                                                                                                         0
+index_columns                                                                                                                                       7
+lsn_time_mapping                                                                                                                                    0
+OrderItems                                                                                                                                          0
+Orders                                                                                                                                              0
+systranschemas                                                                                                                                      0
+
+(21 rows affected)

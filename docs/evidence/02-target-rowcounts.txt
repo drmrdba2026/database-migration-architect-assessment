@@ -1,0 +1,12 @@
+table_name                                                                                                                       row_count           
+-------------------------------------------------------------------------------------------------------------------------------- --------------------
+__EFMigrationsHistory                                                                                                                               3
+BasketItems                                                                                                                                         0
+Baskets                                                                                                                                             0
+Catalog                                                                                                                                             0
+CatalogBrands                                                                                                                                       0
+CatalogTypes                                                                                                                                        0
+OrderItems                                                                                                                                          0
+Orders                                                                                                                                              0
+
+(8 rows affected)

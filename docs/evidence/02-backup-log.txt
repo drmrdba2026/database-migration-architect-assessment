@@ -1,0 +1,14 @@
+10 percent processed.
+20 percent processed.
+30 percent processed.
+40 percent processed.
+50 percent processed.
+Processed 1024 pages for database 'eShopOnWeb', file 'eShopOnWeb' on file 1.
+60 percent processed.
+70 percent processed.
+80 percent processed.
+90 percent processed.
+100 percent processed.
+Processed 921 pages for database 'eShopOnWeb', file 'eShopOnWeb_log' on file 1.
+BACKUP DATABASE successfully processed 1945 pages in 0.157 seconds (96.760 MB/sec).
+Backup complete

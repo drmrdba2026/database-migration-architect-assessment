@@ -1,0 +1,11 @@
+WARNING: 
+There are no credentials provided in your command and environment, we will query for account key for your storage account.
+It is recommended to provide --connection-string, --account-key or --sas-token in your command as credentials.
+
+You also can add `--auth-mode login` in your command to use Azure Active Directory (Azure AD) for authorization if your login account is assigned required RBAC roles.
+For more information about RBAC roles in storage, visit https://learn.microsoft.com/azure/storage/common/storage-auth-aad-rbac-cli.
+
+In addition, setting the corresponding environment variables can avoid inputting credentials in your command. Please use --help to get more information about environment variable usage.
+Name                 Blob Type    Blob Tier    Length    Content Type              Last Modified              Snapshot
+-------------------  -----------  -----------  --------  ------------------------  -------------------------  ----------
+eShopOnWeb_full.bak  BlockBlob    Hot          3350528   application/octet-stream  2026-06-08T16:06:12+00:00
